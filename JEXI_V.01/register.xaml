@@ -1,4 +1,4 @@
-﻿<Window x:Class="JEXI_V._01.MainWindow"
+﻿<Window x:Class="JEXI_V._01.register"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,11 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:JEXI_V._01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900"
+        Title="register" Height="500" Width="900"
         WindowStyle = "None"
         ResizeMode ="NoResize"
-        Background="#181735">
-    <Grid>
+        Background="#181735"
+        >
+    <Grid MouseDown="Border_MouseDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
 
@@ -66,14 +67,20 @@
                        HorizontalAlignment="Center"
                        FontFamily="Fonts/#Dosis"
                        />
-            <Button Content="Exit"
+            <TextBlock Text ="Home"
+                       Foreground="LightGray"
+                       Grid.Column="4"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                       />
+            <Button Content="Back"
                         Foreground="White"
                         FontSize="10"
                         FontWeight="Medium"
-                        Margin="64,0,10,0"
-                        Grid.Column="11"
-                        Click="btn_exit"
-                        Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top">
+                        Margin="0,0,10,0"
+                        Grid.Column="12"
+                        Grid.ColumnSpan="2" Click="Button_Click">
 
 
 
@@ -115,49 +122,61 @@
                     Margin="60">
             <StackPanel>
                 <StackPanel Orientation="Horizontal"
-                            Margin="0,0,0,20">
-                    <Image Width="50" Height="50" Source="Images/Damn.png"
+                            RenderTransformOrigin="0.481,-0.551" Margin="0,-150,0,0">
+
+
+
+
+
+
+                    <Image Width="55" Height="90" Source="Images/Damn.png"
                            RenderOptions.BitmapScalingMode="Fant"/>
-                    <TextBlock Text="JEXI"
-                           Foreground="White"
-                           FontSize="20"
-                           FontWeight="Medium"
-                           VerticalAlignment="Center"
-                           FontFamily="Fonts/#Dosis"
-                           Margin="10,0,0,0"
-                           />
+
+
+
+
+
+
+                    <TextBlock
+  x:Name="MyFadingText"
+  Margin="20" 
+  Width="640" Height="60" FontSize="48" VerticalAlignment="Center" FontWeight="UltraLight" FontFamily="Fonts/#Dosis" Foreground="white"><!-- Animates the text block's opacity. -->
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+            Storyboard.TargetName="MyFadingText" 
+            Storyboard.TargetProperty="(UIElement.Opacity)"
+            From="1.0" To="0.0" Duration="0:0:5" 
+            AutoReverse="True" RepeatBehavior="Forever" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </TextBlock.Triggers><Run Text="JEXI"/></TextBlock>
                 </StackPanel>
-                <TextBlock
-                Text="Experience"
-                Foreground="White"
-                FontSize="25"
-                FontWeight="Medium"
-                FontFamily="Fonts/#Dosis"/>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="White"/>
+                    <TextBox x:Name="txtUsername" Margin="10 0" materialDesign:HintAssist.Hint="Enter Username/Email" Foreground="White" Width="492" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Height="31" />
+                </StackPanel>
 
-                <TextBlock
-                Text="The Greatest Reality"
-                Foreground="White"
-                FontSize="25"
-                FontWeight="Medium"
-                FontFamily="Fonts/#Dosis"/>
-
-                <TextBlock
-                Text="And a newer beginning...."
-                Foreground="White"
-                FontSize="25"
-                FontWeight="Normal"
-                FontFamily="Fonts/#Dosis"/>
-
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <materialDesign:PackIcon Kind="Password" Width="25" Height="25" Foreground="White"/>
+                    <TextBox x:Name="txtPassword" Margin="10 0" materialDesign:HintAssist.Hint="Enter Password/Key" Foreground="White" Width="492" BorderBrush="White" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Height="31"/>
+                </StackPanel>
+                <StackPanel Width="100"/>
 
             </StackPanel>
 
             <StackPanel Orientation="Horizontal"
                         Margin="0,15,0,0">
-                <Button Content="Start"
+                <Button 
+                        x:Name="btn_register"
                         Foreground="White"
+                        Content="Register !"
                         FontSize="14"
                         FontWeight="Medium"
-                        Margin="0,0,10,0" Click="Button_Click">
+                        Margin="0,0,10,0" ClickMode="Press" Click="btn_register_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -187,10 +206,10 @@
                 </Button>
 
 
-                <Button Content="Register"
+                <Button Content="Login"
                         Foreground="White"
                         FontSize="14"
-                        FontWeight="Medium" Click="Button_Click_1">
+                        FontWeight="Medium">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
@@ -249,7 +268,7 @@
 
 
         </StackPanel>
-        <StackPanel Orientation="Vertical" Margin="-150,-181,210,425" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+        <StackPanel Orientation="Vertical" Margin="-170,-206,230,450" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

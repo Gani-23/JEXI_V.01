@@ -19,5 +19,22 @@ namespace JEXI_V._01
                 DragMove();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_exit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var register = new register(); //create your new form.
+            register.Show(); //show the new form.
+            this.Close();
+        }
     }
 }
