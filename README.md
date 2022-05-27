@@ -1,5 +1,7 @@
 # JEXI_V.01
 6-4-2022 initiated
+27-5-2022 Phase II
+
 
 # In development phase 
 First commit on 8/4/2022 Added Frontend of application
