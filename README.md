@@ -18,3 +18,8 @@ Final commit  : 29-07-2002 Final
 ✓ To work on keylogger, store the text, classify and analyze the mood of the user
 ✓ Research on python limit on terminal and maybe try to exceed it 
 
+# NOTE
+
+* Change path directories in code 
+* make sure you install python modules
+* some of the unofficial modules would be available in https://www.lfd.uci.edu/~gohlke/pythonlibs/#:~:text=A%20few%20binaries%20are%20available%20for%20the%20PyPy,or%20in%20the%20projects%20public%20revision%20control%20systems.
