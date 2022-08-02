@@ -1,0 +1,82 @@
+{
+    "intents":[
+        {
+            "tag": "Cheer",
+            "patterns":["cheer","Cheer me up","Bored"],
+            "responses":["I got your back mate","Try to listen music","everything heals", "let's do this"]
+        },
+        {
+            "tag": "bot",
+            "patterns":["turn on the bot","bot","turn on the bot"],
+            "responses":["Here you go","Turning on the bot","Initiating the bot", "Alienware initated"]
+        },
+        {
+            "tag" : "greetings",
+            "patterns":["hello","hey","hi","good day","what's up ?","how is it going ? "],
+            "responses":["good day sunshine","you have a good day mate"]
+            },
+        {
+            "tag" : "goodbye",
+            "patterns":["cya","see ya later","goodbye","exit","i'm leaving","have a good day","bye","ciao","later buddy"],
+            "responses":["Talk to you later","goodbye","okay"]
+
+        },
+        {
+            "tag": "age",
+                "patterns": ["how old", "how old ganii is","what is your age","how old are you","age?"],
+                "responses": ["Ganii is 21 years old!", "21 years"]
+                
+        },
+        {
+            "tag": "name",
+                "patterns": ["what is your name","What should I call you","whats your name?","who are you?","Can you tell me"],
+                "responses": ["You can call me Jexi!.","I'm Jexi!", "I'm Neural the assistant of Jexi!"]
+        },
+
+        {
+            "tag": "shop",
+                "patterns": ["Id like to buy something","what are your products?","what do you recommend?", "What are you selling"],
+                "responses": ["Products of amazon,myntra,nykaa,flipkart etc i can order what ever you want just name a thing"]
+        },
+        {
+            "tag": "hours",
+                "patterns": ["when are you guys open","what are your hours","hours of op"],
+                "responses": ["24/7","Any hour mate"]
+        },
+        {"tag": "stocks",
+            "patterns": ["what stocks do I own?", "how are my shares?", "what companies am I investing in?", "what am I doing"],
+            "responses": ["You Own the following shares: ABBV, AAPL, FB, NDA and an ATF of the S&P 500 Index!"]},
+            {
+                "tag":"Radio",
+                "patterns":["radios","music","podcast","spotify","gaana","resso","play online music"],
+                "responses":["Bravo!!","Processing","taking you there"]
+            },
+            {
+                "tag": "coin",
+                "patterns": ["toss a coin","flip a coin"],
+                "responses":["it's heads","it's tails"]
+            },
+            {
+                "tag":"bedtime stories",
+                "patterns":["read me bed time stroies"],
+                "responses":["cover yourself with a rug and hug tight stroy is on the way darlin","here is my story dear"]
+            },
+            {
+                "tag":"What i can do",
+                "patterns":["What can you do","What makes you so special","try me","ask me anything"],
+                "responses":["Analysing...."]                
+            },
+            {
+                "tag":"exit",
+                "patterns":["exit","quit","close"],
+                "responses":["always here to help you ...","have a nice day","terminating"]
+            },
+
+
+            {
+                "tag":"home work",
+                "patterns":["homework","can you can do my home work","manuscript","handwritting","help"],
+                "responses":["sure i can","enroute with me your text","easy peasy work"]
+            }
+        ]
+    }
