@@ -7,9 +7,9 @@
 First commit on 8/4/2022 Added Frontend of application
 
 
-Major commit 1: 15-4-2022 Commit 
-Major commit 2: 20-05-2022 commit 2
-Final commit  : 29-07-2002 Final
+* Major commit 1: 15-4-2022 Commit 
+* Major commit 2: 20-05-2022 commit 2
+* Final commit  : 29-07-2002 Final
 
 # Worked on 
 ✓ Add a trigger to backend 
